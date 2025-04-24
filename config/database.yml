@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: 127.0.0.1
+  username: postgres
+  password: password
+  pool: 5
+
+development:
+  <<: *default
+  database: grepp_development
+
+test:
+  <<: *default
+  database: grepp_test
